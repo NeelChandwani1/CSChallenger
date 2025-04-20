@@ -1,0 +1,8 @@
+.vscode
+node_modules
+*.test.ts
+*.spec.ts
+*.log
+dist
+build
+out

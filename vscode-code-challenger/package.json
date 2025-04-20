@@ -1,0 +1,55 @@
+{
+  "name": "vscode-code-challenger",
+  "displayName": "Code Challenger",
+  "description": "AI-powered coding challenges in VS Code",
+  "version": "0.0.1",
+  "private": true,
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeChallenger.startChallenge",
+        "title": "Code Challenger: Start Challenge",
+        "category": "Code Challenger"
+      },
+      {
+        "command": "codeChallenger.submitSolution",
+        "title": "Code Challenger: Submit Solution",
+        "category": "Code Challenger"
+      }
+    ],
+    "configuration": {
+      "title": "Code Challenger",
+      "properties": {
+        "codeChallenger.openAIApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API Key for code analysis"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "openai": "^4.20.1"
+  }
+}
